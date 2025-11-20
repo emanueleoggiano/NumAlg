@@ -46,6 +46,15 @@ namespace numerical_algorithms
                     return _EvalPoint.has_value() && std::isfinite(_EvalPoint.value());
                 }
 
+                /*===================================== SETTER =================================*/
+                void SetEvalPoint(double eval_point)
+                {
+                    if(std::isfinite(eval_point))
+                        _EvalPoint = eval_point;
+                    else
+                        throw std::invalid_argument("Evaluation point must be a finite value");
+                }
+
 
                 /* Calculate the first derivative with the following methods:
                 *
