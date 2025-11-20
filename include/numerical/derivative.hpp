@@ -47,7 +47,7 @@ namespace numerical_algorithms
                 }
 
                 /*===================================== SETTER =================================*/
-                void SetEvalPoint(double eval_point)
+                void SetEvalPoint(const double eval_point)
                 {
                     if(std::isfinite(eval_point))
                         _EvalPoint = eval_point;
